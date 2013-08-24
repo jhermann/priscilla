@@ -11,7 +11,7 @@ The documentation for the current GitHub master source is regularly published to
 
 ## License
 
-*cobblestones* is released under the 
+*Priscilla* is released under the 
 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.html),
 see LICENSE for details.
 

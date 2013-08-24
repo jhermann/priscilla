@@ -1,4 +1,4 @@
-#! /usr/bin/make -f
+git diff#! /usr/bin/make -f
 #
 # Makefile for Sphinx documentation
 #
@@ -81,17 +81,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/cobblestones.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/priscilla.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/cobblestones.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/priscilla.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/cobblestones"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/cobblestones"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/priscilla"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/priscilla"
 	@echo "# devhelp"
 
 epub:
