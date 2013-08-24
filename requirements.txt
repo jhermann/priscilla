@@ -1,0 +1,8 @@
+#
+# dependency list for pip
+#
+
+docutils >= 0.11
+Sphinx == 1.1.3
+markdown2
+

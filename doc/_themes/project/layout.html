@@ -1,0 +1,111 @@
+{#
+    Sphinx layout template derived from the agogo theme, originally written
+    by Andi Albrecht.
+
+    :copyright: Copyright 2007-2011 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{% extends "basic/layout.html" %}
+
+{% block header %}
+    <a name="top"></a>
+    <div class="header-wrapper">
+        <div class="header">
+            {%- if logo %}
+                <p class="logo"><a href="{{ pathto(master_doc) }}">
+                    <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
+                </a></p>
+            {%- endif %}
+            {%- block headertitle %}
+            <div class="headertitle"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a></div>
+            {%- endblock %}
+            <div class="rel">
+                <a href="/" title="Home"><big>⌂</big> Home</a> {{ reldelim2 }}
+                <a href="{{ pathto(master_doc) }}">⇶ Contents</a>
+                {%- if rellinks %} {{ reldelim2 }} {%- endif %}
+
+                {%- for rellink in rellinks|reverse %}
+                <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
+                    {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
+                {%- if not loop.last %}{{ reldelim2 }}{% endif %}
+                {%- endfor %}
+
+                {%- if theme_github_repo_url %}
+                    <a id="forkme_banner" href="{{ theme_github_repo_url }}">View on GitHub</a>
+                {%- endif %}
+            </div>
+         </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="document">
+                {%- block document %}
+                    {{ super() }}
+                {%- endblock %}
+            </div>
+            <div class="sidebar">
+                {%- block sidebartoc %}
+                    <h3>{{ _('Table Of Contents') }}</h3>
+                    {{ toctree() }}
+                {%- endblock %}
+                {%- block sidebarsearch %}
+                    <h3 style="margin-top: 1.5em;">{{ _('Search') }}</h3>
+                    <form class="search" action="{{ pathto('search') }}" method="get">
+                        <input type="text" name="q" />
+                        <input type="submit" value="{{ _('Go') }}" />
+                        <input type="hidden" name="check_keywords" value="yes" />
+                        <input type="hidden" name="area" value="default" />
+                    </form>
+                    <p class="searchtip" style="font-size: 90%">
+                        {{ _('Enter search terms or a module, class or function name.') }}
+                    </p>
+                {%- endblock %}
+                {%- if theme_ohloh_id %}
+                    <div id="project_users" class="ohloh">
+                        <script type="text/javascript" 
+                            src="http://www.ohloh.net/p/{{ theme_ohloh_id }}/widgets/project_users.js?style={{ theme_ohloh_style }}"></script>    
+                    </div>
+                    <div id="project_factoids_stats" class="ohloh">
+                        <script type="text/javascript" 
+                            src="http://www.ohloh.net/p/{{ theme_ohloh_id }}/widgets/project_factoids_stats.js"></script>
+                    </div>
+                {%- endif %}
+            </div>
+            <div class="clearer"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer-wrapper">
+        <div class="footer">
+            <span class="left">
+                <a href="#top"><big>⌅</big> Top</a>
+                {%- if rellinks %} {{ reldelim2 }} {%- endif %}
+
+                {%- for rellink in rellinks|reverse %}
+                <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
+                    {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
+                {%- if not loop.last %}{{ reldelim2 }}{% endif %}
+                {%- endfor %}
+                {%- if show_source and has_source and sourcename %}
+                    {{ reldelim2 }}
+                    <a href="{{ pathto('_sources/' + sourcename, true)|e }}"
+                         rel="nofollow">{{ _('Show Source') }}</a>
+                {%- endif %}
+            </span>
+
+            <span class="right">
+                {{ super() }}
+            </span>
+            <div class="clearer"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+

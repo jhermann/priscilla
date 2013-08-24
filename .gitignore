@@ -1,0 +1,44 @@
+*.py[cod]
+*.log
+
+# Temp dirs
+share
+run
+var
+gh-pages
+
+# venv
+bin
+lib
+include
+local
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+sdist
+develop-eggs
+.installed.cfg
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Eclipse
+.project
+.pydevproject
