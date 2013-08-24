@@ -1,4 +1,5 @@
 #! /bin/bash
+set -e
 workdir="gh-pages"
 origin=$(git config --get remote.origin.url)
 
