@@ -21,7 +21,7 @@
 Welcome to the “Priscilla” manual!
 ==================================
 
-Scripts for creating omnibus packages of a collection of build and administration tools.
+Scripts for creating omnibus packages of a set of build and administration tools.
 
 
 Contents
