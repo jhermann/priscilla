@@ -1,4 +1,4 @@
-git diff#! /usr/bin/make -f
+#! /usr/bin/make -f
 #
 # Makefile for Sphinx documentation
 #
