@@ -1,6 +1,6 @@
 # Priscilla ![Logo](https://raw.github.com/jhermann/priscilla/master/doc/_static/priscilla-logo-64.png)
 
-Scripts for omnibus packages of a collection of build and administration tools.
+Scripts for creating omnibus packages for a set of build and administration tools.
 
 
 ## Documentation
