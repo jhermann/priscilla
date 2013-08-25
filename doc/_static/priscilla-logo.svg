@@ -42,15 +42,6 @@
      inkscape:window-maximized="0" />
   <defs
      id="defs3">
-    <filter
-       color-interpolation-filters="sRGB"
-       id="filter4817"
-       inkscape:collect="always">
-      <feGaussianBlur
-         id="feGaussianBlur4819"
-         stdDeviation="0.41212299"
-         inkscape:collect="always" />
-    </filter>
     <radialGradient
        xlink:href="#linearGradient2260"
        r="49.884411"
@@ -656,6 +647,31 @@
            d="m 312.85446,302.72933 c 0,0 -3.6444,0.332 -3.6444,0.332 0,0 -0.43535,-0.57489 -0.43535,-0.57489 0,0 2.92508,-0.27845 2.92508,-0.27845 0,0 -3.49444,-4.61504 -3.49444,-4.61504 0,0 -0.27507,0.0387 -0.27507,0.0387 0,0 -1.04404,5.62278 -1.04404,5.62278 0,0 -0.71702,0.0567 -0.71702,0.0567 0,0 1.17969,-6.2207 1.17969,-6.2207 0,0 1.1129,-0.16353 1.1129,-0.16353 0,0 4.39265,5.80241 4.39265,5.80241 m -1.45951,-0.67121 c 0,0 -2.73666,0.26384 -2.73666,0.26384 0,0 -0.43289,-0.57153 -0.43289,-0.57153 0,0 2.02244,-0.20333 2.02244,-0.20333 0,0 -1.74042,-2.29822 -1.74042,-2.29822 0,0 -0.72623,3.93289 -0.72623,3.93289 0,0 -0.71585,0.0583 -0.71585,0.0583 0,0 1.00578,-5.44944 1.00578,-5.44944 0,0 0.0861,-0.012 0.0861,-0.012 0,0 3.23777,4.27944 3.23777,4.27944"
            id="path4713" />
       </g>
+    </g>
+    <g
+       id="g3869"
+       inkscape:export-filename="g3869.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <text
+         xml:space="preserve"
+         style="font-size:39.42182159px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff00ff;fill-opacity:1;stroke:none;font-family:Viper Squadron;-inkscape-font-specification:Viper Squadron"
+         x="330.81055"
+         y="1323.9244"
+         id="text3563-5"
+         sodipodi:linespacing="125%"
+         transform="matrix(1.0140092,-0.14411329,-0.02376049,0.98956124,0,0)"><tspan
+           sodipodi:role="line"
+           id="tspan3565-2"
+           x="330.81055"
+           y="1323.9244">P</tspan></text>
+      <rect
+         y="1232.0421"
+         x="301.8194"
+         height="30.975775"
+         width="30.975775"
+         id="rect3099"
+         style="opacity:0.7;fill:none;stroke:#808080;stroke-width:1.02422583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
     </g>
   </g>
 </svg>
