@@ -1,6 +1,7 @@
 #! /bin/bash
 set -e
-workdir="gh-pages"
+rootdir=$(cd $(dirname "$0") && pwd)
+workdir="$rootdir/gh-pages"
 origin=$(git config --get remote.origin.url)
 
 init() {
@@ -17,9 +18,11 @@ init() {
 }
 
 publish() {
+    set -x
     rm -rf $workdir
     mkdir $workdir
-    htmldir="doc/html"
+    htmldir="$rootdir/build/html"
+    test ! -d "$htmldir" || rm -rf "$htmldir"
 
     doc/Makefile html
 
@@ -29,7 +32,7 @@ publish() {
     git remote add -t gh-pages -f origin "$origin"
     git checkout gh-pages
 
-    cp -rpl ../build/html/{,.}??* .
+    cp -frpl "$htmldir"/{,.}??* .
     git add .
 
     # Push it!
