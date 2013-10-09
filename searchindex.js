@@ -1,0 +1,1 @@
+Search.setIndex({objects:{},terms:{"function":[0,1],search:1,set:1,welcom:1,creat:1,script:1,tool:1,manual:1,content:1,packag:[0,1],omnibu:[0,1],build:[0,1],helper:[0,1],administr:1,page:1,priscilla:[0,1],navig:1},objtypes:{},titles:["Building Omnibus Packages with Priscilla","Welcome to the \u201cPriscilla\u201d manual!"],objnames:{},filenames:["packaging","index"]})
