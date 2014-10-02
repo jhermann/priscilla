@@ -58,4 +58,13 @@ you have to [get-pip](http://pip.readthedocs.org/en/latest/installing.html#insta
 
 ## Building the pyenv package
 
-**TODO**
+To build the package, first call `sudo ./setup.sh`.
+You're then in a newly created `pyenv` user home which make the build tool happy
+and writing into the right paths – now execute:
+
+```sh
+src/pyenv_bootstrap.sh
+src/fpm_debian.sh
+```
+
+The build process requires internet access, so you might need to activate a HTTP proxy before building.
