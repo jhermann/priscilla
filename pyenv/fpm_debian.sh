@@ -16,7 +16,7 @@ test $(id -un) == "pyenv" || fail "Script must be run as 'pyenv' user!"
 
 cd
 version=$(cd .pyenv && git describe --tag); version=${version#v}
-iteration=$(grep Revision: $(dirname $0)/pyenv_bootstrap.sh | tr -dc 0-9)-$(lsb_release -cs)
+iteration=$(cat ~/.priscilla-gitrev)-$(lsb_release -cs)
 description="Simple Python version management"
 url="https://github.com/jhermann/priscilla/tree/master/pyenv"
 
