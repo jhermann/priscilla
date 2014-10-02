@@ -4,9 +4,9 @@
 #
 set -e
 
-: ${PYENV_TAG:=v0.4.0-20130726}
+: ${PYENV_TAG:=v20140924}
 : ${PYENV_SRC:=https://github.com/yyuu/pyenv.git}
-: ${SNAKES:=2.6.8 2.7.5 3.3.2} # add versions in SORTED order
+: ${SNAKES:=2.6.9 2.7.8 3.3.5} # add versions in SORTED order
 : ${VENV_SRC:=https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.1.tar.gz}
 
 fail() { # fail with error message on stderr and exit code 1
@@ -54,4 +54,3 @@ done
 #echo '# activate pyenv, source this file in ~/.bash_profile or similar' >~/activate.sh
 #echo 'export PATH="'"$PYENV_HOME"'/.pyenv/bin:$PATH"' >>~/activate.sh
 #echo 'eval "$(pyenv init -)"' >>~/activate.sh
-
