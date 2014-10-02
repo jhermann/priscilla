@@ -56,15 +56,19 @@ However, such virtualenvs come bare and without `pip` –
 you have to [get-pip](http://pip.readthedocs.org/en/latest/installing.html#install-pip) one into them.
 
 
-## Building the pyenv package
+## Building the opt-pyenv package
+
+Yes, the following is a *long* way from how a Debian package is normally built,
+but I'm a busy guy and only interested in results, as long as they hold up to the requirements.
+So live with it, or go away and do your own…
 
 To build the package, first call `sudo ./setup.sh`.
-You're then in a newly created `pyenv` user home which make the build tool happy
+You're then in a newly created `pyenv` user home which makes the build tool happy
 and writing into the right paths – now execute:
 
 ```sh
-src/pyenv_bootstrap.sh
-src/fpm_debian.sh
+src/pyenv_bootstrap.sh # building… wait a wee bit
+src/fpm_debian.sh # package what was built
 ```
 
 The build process requires internet access, so you might need to activate a HTTP proxy before building.
