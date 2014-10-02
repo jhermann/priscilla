@@ -11,11 +11,17 @@ pyenv_home=${PYENV_HOME:-/opt/pyenv}
 
 test $(id -u) -eq 0 || { echo "Setup must be done as root!"; exit 1; }
 
+# Platform stuff
+case $(lsb_release -cs) in
+    squeeze)    readline=5; libdb=4.8 ;;
+    precise)    readline=6; libdb=5.1 ;;
+    *)          readline=6; libdb=5.1 ;;
+esac
+
 # Install build-depends
 apt-get install python-dev build-essential git \
     libbz2-dev libexpat1-dev libgdbm-dev libncursesw5-dev \
-    "libreadline6-dev|libreadline5-dev" \
-    "libdb5.1-dev|libdb4.8-dev" \
+    libreadline$readline-dev libdb$libdb-dev \
     libsqlite3-dev libssl-dev libtar-dev libtinfo-dev libz-dev libzip-dev
 
 # Create pydev user (needed to build the packages, but not when using them)
