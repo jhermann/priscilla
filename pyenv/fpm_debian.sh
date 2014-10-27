@@ -20,6 +20,10 @@ iteration=$(cat ~/.priscilla-gitrev)-$(lsb_release -cs)
 description="Simple Python version management"
 url="https://github.com/jhermann/priscilla/tree/master/pyenv"
 
+# Remove redundant build stuff
+rm -rf ./tmp/* 2>/dev/null || :
+rm -rf ./lib/virtualenv/build 2>/dev/null || :
+
 test -n "$DEBFULLNAME" || fail "You must define the DEBFULLNAME envvar"
 test -n "$DEBEMAIL" || fail "You must define the DEBEMAIL envvar"
 
