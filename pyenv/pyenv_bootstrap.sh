@@ -4,9 +4,9 @@
 #
 set -e
 
-: ${PYENV_TAG:=v20140924}
+: ${PYENV_TAG:=v20141012}
 : ${PYENV_SRC:=https://github.com/yyuu/pyenv.git}
-: ${SNAKES:=2.6.9 2.7.8 3.3.5} # add versions in SORTED order
+: ${SNAKES:=2.6.9 2.7.8 3.3.6 3.4.2} # add versions in SORTED order
 : ${VENV_SRC:=https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.1.tar.gz}
 
 fail() { # fail with error message on stderr and exit code 1
@@ -17,14 +17,15 @@ fail() { # fail with error message on stderr and exit code 1
 test $(id -un) == "pyenv" || fail "Script must be run as the 'pyenv' user!"
 
 cd
+mkdir -p bin lib tmp
+rm bin/* 2>/dev/null || :
+rm -rf .pyenv 2>/dev/null || :
+rm -rf lib/virtualenv 2>/dev/null || :
+
 PYENV_HOME=$(pwd)
 test -x .pyenv/bin/pyenv && ( cd .pyenv; git pull --ff-only; ) || git clone "$PYENV_SRC" .pyenv
 ( cd .pyenv; git checkout "$PYENV_TAG"; )
 export PATH="$HOME/.pyenv/bin:$PATH"
-
-mkdir -p bin lib tmp
-rm bin/* 2>/dev/null || :
-rm -rf lib/virtualenv 2>/dev/null || :
 
 test -f tmp/virtualenv.tgz || wget --no-check-certificate -O tmp/virtualenv.tgz "$VENV_SRC"
 ( cd lib && tar xzf ../tmp/virtualenv.tgz && mv virtualenv-[0-9]* virtualenv ) || \
