@@ -3,6 +3,7 @@
 # pyenv installation
 #
 set -e
+umask 0022
 
 : ${PYENV_TAG:=v20141012}
 : ${PYENV_SRC:=https://github.com/yyuu/pyenv.git}

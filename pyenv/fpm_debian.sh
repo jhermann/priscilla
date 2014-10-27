@@ -3,6 +3,7 @@
 # pyenv Debian packaging
 #
 set -e
+umask 0022
 
 name="${PYENV_PKGNAME:-opt-pyenv}"
 
