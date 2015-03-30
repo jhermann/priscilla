@@ -33,6 +33,7 @@ grep ^pyenv: /etc/passwd >/dev/null || \
 
 # Fill pyenv home with initial content
 mkdir -p $pyenv_home/src
+chown $(id pyenv -un).$(id pyenv -gn) $pyenv_home
 cp -p $(dirname $0)/*.sh $pyenv_home/src
 ( cd $(dirname $0) && git rev-parse --short HEAD ) >$pyenv_home/.priscilla-gitrev
 chown -R $(stat --format '%U.%G' $pyenv_home) $pyenv_home/src $pyenv_home/.priscilla*
