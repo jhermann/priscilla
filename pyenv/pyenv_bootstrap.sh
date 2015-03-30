@@ -5,9 +5,9 @@
 set -e
 umask 0022
 
-: ${PYENV_TAG:=v20141012}
+: ${PYENV_TAG:=v20150326}
 : ${PYENV_SRC:=https://github.com/yyuu/pyenv.git}
-: ${SNAKES:=2.6.9 2.7.8 3.3.6 3.4.2} # add versions in SORTED order
+: ${SNAKES:=2.6.9 2.7.9 3.3.6 3.4.3} # add versions in SORTED order
 : ${VENV_SRC:=https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.1.tar.gz}
 
 fail() { # fail with error message on stderr and exit code 1
