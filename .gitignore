@@ -42,3 +42,7 @@ nosetests.xml
 # Eclipse
 .project
 .pydevproject
+
+# This Project
+*.deb
+tmp/
