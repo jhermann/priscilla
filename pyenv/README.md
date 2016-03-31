@@ -62,6 +62,18 @@ Yes, the following is a *long* way from how a Debian package is normally built,
 but I'm a busy guy and only interested in results, as long as they hold up to the requirements.
 So live with it, or go away and do your own…
 
+:bulb: | You might want to do the build in a Docker or Vagrant box, if you fear for your system's stability or security.
+---: | :---
+
+The package building uses [fpm](https://github.com/jordansissel/fpm),
+if you don't have it installed do so now:
+
+```sh
+apt-get install ruby ruby-dev
+gem install fpm
+fpm -h | grep fpm.version
+```
+
 To build the package, first call `sudo ./setup.sh`.
 You're then in a newly created `pyenv` user home which makes the build tool happy
 and writing into the right paths – now execute:
