@@ -1,4 +1,4 @@
-# "opt-pyenv" Omnibus Package for Python 2.6, 2.7, 3.3, and 3.4
+# "opt-pyenv" Omnibus Package for Python 2.6, 2.7, 3.3, 3.4, and 3.5
 
 [pyenv](https://github.com/yyuu/pyenv) is a program to automate the building and installation of various Python versions,
 independent of the version that comes with your system.
