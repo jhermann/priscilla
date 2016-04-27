@@ -11,6 +11,7 @@ pyenv_home=${PYENV_HOME:-/opt/pyenv}
 
 test $(id -u) -eq 0 || { echo "Setup must be done as root!"; exit 1; }
 umask 0022
+builtin cd "$(dirname "$0")"
 
 # Platform stuff
 case $(lsb_release -cs) in
