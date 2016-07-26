@@ -6,10 +6,10 @@ set -e
 umask 0022
 
 # Set defaults for various options, if not already provided in the environment
-: ${PYENV_TAG:=v20160422}
+: ${PYENV_TAG:=v20160726}
 : ${PYENV_SRC:=https://github.com/yyuu/pyenv.git}
-: ${SNAKES:=2.6.9 2.7.11 3.3.6 3.4.4 3.5.1} # add versions in SORTED order
-: ${VENV_SRC:=https://pypi.python.org/packages/source/v/virtualenv/virtualenv-15.0.1.tar.gz}
+: ${SNAKES:=2.6.9 2.7.12 3.3.6 3.4.5 3.5.2} # add versions in SORTED order
+: ${VENV_SRC:=https://pypi.python.org/packages/5c/79/5dae7494b9f5ed061cff9a8ab8d6e1f02db352f3facf907d9eb614fb80e9/virtualenv-15.0.2.tar.gz}
 
 
 fail() { # fail with error message on stderr and exit code 1
