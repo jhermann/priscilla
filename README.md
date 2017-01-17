@@ -19,3 +19,4 @@ see LICENSE for details.
 ## Similar Projects
 
 * [osuosl/fpm-builds](https://github.com/osuosl/fpm-builds) – Stupid simple scripts to build random applications using `fpm`.
+* [bernd/fpm-recipes](https://github.com/bernd/fpm-recipes) – Collection of fpm-cookery recipes.
