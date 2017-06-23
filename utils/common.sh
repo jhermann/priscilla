@@ -171,7 +171,7 @@ pkg_tools_pkg_dir() {
         --workdir "$BUILD_DIR/tmp" "$@" )
 
     # Provide pkg info for *.deb
-    if which dpkg-deb 2>/dev/null; then
+    if which dpkg-deb >/dev/null 2>&1; then
         for pkg in "$BUILD_DIR"/opt-tools-$name*.deb; do
             echo "~~~" "$pkg"
             #dpkg-deb -c "$pkg"
