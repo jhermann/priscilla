@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(command cd $(dirname $0) && pwd) ; . $SCRIPT_DIR/utils/common.sh
 
 export GEM_NAME=fpm
-export GEM_VERSION=1.6.2
+export GEM_VERSION=1.8.1
 export GEM_DESC="fpm helps you build packages quickly and easily (packages like RPM and DEB formats)"
 export GEM_URL="http://fpm.readthedocs.io/"
 export GEM_DEPS="$JVM_DEPS"
@@ -56,7 +56,7 @@ exec "$TOOLS_HOME/$GEM_NAME/bin/$GEM_NAME" "$@"
     $DRY ln -nfs "$TOOLS_DIR/bin/$GEM_NAME" "$BUILD_DIR$BIN_DIR"
 
     $DRY_RUN || ( cd "$BUILD_DIR" && find opt usr \( -type d -o -type l \) -ls )
-    #$DRY_RUN || ( $FPM_BIN -h | grep $GEM_NAME.version )
+    $DRY_RUN || ( $FPM_BIN -h | egrep $GEM_NAME.+version )
 }
 
 
