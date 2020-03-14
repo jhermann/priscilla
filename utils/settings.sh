@@ -2,7 +2,7 @@
 #DESC Global settings like versions and URLs
 
 # Versions
-JRUBY_VERSION=9.2.11.0
+JRUBY_VERSION=1.7.27  # see https://github.com/jordansissel/fpm/issues/1194
 MAVEN_VERSION=3.5.0
 ANT_VERSION=1.9.3
 
