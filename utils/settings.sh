@@ -2,7 +2,7 @@
 #DESC Global settings like versions and URLs
 
 # Versions
-JRUBY_VERSION=1.7.27
+JRUBY_VERSION=9.2.11.0
 MAVEN_VERSION=3.5.0
 ANT_VERSION=1.9.3
 
@@ -14,7 +14,7 @@ test -n "$DEBFULLNAME" || export DEBFULLNAME="Jürgen Hermann"
 test -n "$DEBEMAIL" || export DEBEMAIL=jh@web.de
 
 # Java
-JVM_DEPS='-d oracle-java8-jre|oracle-java8-installer|java8-runtime-headless'
+JVM_DEPS='-d openjdk-8-jre|zulu8|oracle-java8-jre|oracle-java8-installer|java8-runtime-headless'
 
 # Maven
 MAVEN_REPO="https://repo1.maven.org/maven2"

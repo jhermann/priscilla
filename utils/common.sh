@@ -161,7 +161,7 @@ pkg_tools_pkg_dir() {
     # --iteration 1-$(lsb_release -cs)
     $DRY mkdir -p "$BUILD_DIR/tmp"
     $DRY rm "$BUILD_DIR"/opt-tools-$name*.deb 2>/dev/null || :
-    ( cd "$BUILD_DIR" && $DRY $FPM_BIN -s dir -t deb \
+    ( cd "$BUILD_DIR" && set -x && $DRY $FPM_BIN -s dir -t deb \
         -n "opt-tools-$name" -v $version --iteration $iteration \
         --category "tools" --deb-user root --deb-group root \
         -m "\"$DEBFULLNAME\" <$DEBEMAIL>" \
