@@ -23,7 +23,7 @@ gem_install() {
     test -z "$version" || opts="$opts --version $version"
 
     echo "Installing GEM $name $version"
-    ( cd "$BUILD_DIR$PKG_HOME" && java -jar "$JRUBY_JAR" -S gem install -i "$GEM_HOME" --no-rdoc --no-ri $opts $name )
+    ( cd "$BUILD_DIR$PKG_HOME" && java -jar "$JRUBY_JAR" -S gem install -N -i "$GEM_HOME" $opts $name )
 }
 
 
